@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Ordering system (complete)</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<html>
+
+
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" href="styles.css" />
+</head><center>
+  <div class="topnav">
+    
+  <a class="active" href="#home">ADMIN</a>
+  <a href="#news">STAFF</a>
+  <a href="#contact">COSTUMER</a>
+  <a href="#about">ABOUT</a>
+</div><center>
+  <br>
+  <CENTER>
+  <FONT COLOR = WEEDS>
+  
+    <H1>PIZZALAB</H1><FONT></CENTER>
+
+  <center>
+<img src="https://cdn1.imggmi.com/uploads/2019/10/10/b4bf434ff936f1f2f0dea09e07812633-full.png" border="0" width="300" height="300"></center>
+<body onload="onload();">
+
+    <center>
+      
+      <div class="page1">    
+
+<font color=red>
+        
+<div class="login">
+ 
+  <div id="form" hidden>
+  <label for username>
+    <input type="text" placeholder="username" class="inputLog" maxlength="40" id="username"/>
+   </label>
+   <br>
+  <label for password>
+    <input type="password" placeholder="password" class="inputLog"  maxlength="40" id="password" />
+  </label> 
+  
+    <br>
+    <button type="submit" value="submit" id="submit" onclick="check();"> Log In </button>
+  </div>
+  
+</div>
+
+        
+        </div>
+  </center>
+
+     </>
+  
+  
+
+
+  <div class="loader" >
+  <div class="inner one"></div>
+  <div class="inner two"></div>
+  <div class="inner three"></div>
+  <div class="inner four"></div>
+</div>
+
+
+  
+
+
+<div class="page2" hidden> 
+<br><br>
+        <div data-role="navbar">
+  
+          
+<ul class="topnav">
+  <li id="home" onclick="mainfood();"><a class="active" ><i class="fa fa-home w3-xxxlarge"></i> Main Course</a></li>
+  <li id="news" onclick="beverages();"><a>Beverages</a></li>
+  <li id="contacts" onclick="dessert();"><a >Sweets</a></li>
+  <li id="logout" class="right" onclick="logout();"><a ><i class="fa fa-power-off w3-xxxlarge"></i> Log Out</a></li>
+</ul>
+          
+    </div>
+    
+    
+<div id="main_course" >
+
+<div id="result"></div>
+<table>
+<tr>
+<td style="width:65%">
+<div id="food_main">
+
+<div id="item1" onclick="item1();" class="food">
+    <img class="imgs" src="https://cdn1.imggmi.com/uploads/2019/10/10/1982a1b7a2e16df3fa440c5dea25d4ca-full.png" id="img1" />
+            <p class="details" id="detail1">HAM AND CHEESE</p>
+	<p class="prices" id="prices1">₱320.00</p>
+</div>
+
+
+<div id="item2" onclick="item2();" class="food">
+    <img class="imgs" src="https://cdn1.imggmi.com/uploads/2019/10/10/fc99255d0a69f380db37c87b3a44e649-full.png" id="img2" />
+            <p class="details" id="detail2">CHEESY VEGGIES PIZZA</p>
+	<p class="prices" id="prices2">₱330.00</p>
+</div>
+
+<div id="item3" onclick="item3();" class="food">
+    <img class="imgs" src="https://cdn1.imggmi.com/uploads/2019/10/10/a1b85e3e0cd90f08760d06a20ecce3b1-full.png" id="img3" />
+  <p class="details" id="detail3">PEPPERONI PIZZA<p>
+	<p class="prices" id="prices3">₱350.00</p>
+</div>
+
+<div id="item4" onclick="item4();" class="food">
+    <img class="imgs" src="https://cdn1.imggmi.com/uploads/2019/10/10/c743f8e55f1d101acb2667778f437960-full.png" id="img4" />
+            <p class="details" id="detail4">CHEESE CLASSIC PIZZA</p>
+	<p class="prices" id="prices4">₱400.00</p>
+</div>
+
+<div id="item5" onclick="item5();" class="food">
+    <img class="imgs" src="https://spavi-noo-prod.s3.ap-southeast-1.amazonaws.com/s3fs-public/styles/product_image/public/products/pizza/images/TEXAS%20CHICKEN%20BBQ_15.png?itok=m3491jMX" id="img5" />
+            <p class="details" id="detail5">CHICKEN BARBERQUE PIZZA</p>
+	<p class="prices" id="prices5">₱550.00</p>
+</div>
+
+<div id="item6" onclick="item6();" class="food">
+    <img class="imgs" src="https://spavi-noo-prod.s3.ap-southeast-1.amazonaws.com/s3fs-public/styles/medium/public/products/pizza/images/pizzamoji-product-button-web_0.png?itok=irFMGuxU" id="img6" />
+            <p class="details" id="detail6">HEART PIZZA</p>
+	<p class="prices" id="prices6">₱320.00</p>
+</div>
+  
+</div>
+
+
+
+<div id="beverages" hidden>
+
+<div id="item7" onclick="item7();" class="food">
+    <img class="imgs" src="http://tuhinternational.com/wp-content/uploads/Coke-Can-Glass.jpg" id="img7" />
+            <p class="details" id="detail7">coke</p>
+	<p class="prices" id="prices7">$3.00</p>
+</div>
+
+<div id="item8" onclick="item8();" class="food">
+    <img class="imgs" src="http://mycookingspot.com/wp-content/uploads/2014/04/elderflower.png" id="img8" />
+            <p class="details" id="detail8">strawberry juice</p>
+	<p class="prices" id="prices8">$8.00</p>
+</div>
+
+<div id="item9" onclick="item9();" class="food">
+    <img class="imgs" src="http://www.flameoncurry.com/uploads/product/app.jpg" id="img9" />
+            <p class="details" id="detail9">apple juice</p>
+	<p class="prices" id="prices9">$7.00</p>
+</div>
+
+<div id="item10" onclick="item10();" class="food">
+    <img class="imgs" src="http://cdn2.foodviva.com/static-content/food-images/pineapple-recipes/pineapple-juice-recipe/pineapple-juice-recipe-250.jpg" id="img10" />
+            <p class="details" id="detail10">pineapple juice</p>
+	<p class="prices" id="prices10">$7.00</p>
+</div>
+
+
+<div id="item11" onclick="item11();" class="food">
+    <img class="imgs" src="http://www.tapiocaexpress.com/wp-content/uploads/2014/06/Tapioca-Milk-Tea.jpg" id="img11" />
+            <p class="details" id="detail11">milk tea</p>
+	<p class="prices" id="prices11">$6.00</p>
+</div>
+
+
+</div>
+
+<div id="desserts" hidden>
+
+
+<div id="item12" onclick="item12();" class="food">
+    <img class="imgs" src="http://cdn1.tmbi.com/TOH/Images/Photos/37/300x300/exps43602_THHC1442845D28A.jpg" id="img12" />
+            <p class="details" id="detail12">strawberry cake</p>
+	<p class="prices" id="prices12">$20.00</p>
+</div>
+
+<div id="item13" onclick="item13();" class="food">
+    <img class="imgs" src="http://www.kawalingpinoy.com/wp-content/uploads/2015/05/creamcheeseflan-a1-680x490.jpg" id="img13" />
+            <p class="details" id="detail13">leche flan</p>
+	<p class="prices" id="prices13">$18.00</p>
+</div>
+
+<div id="item14" onclick="item14();" class="food">
+    <img class="imgs" src="http://www.marketmanila.com/images/aabukpa3.JPG" id="img14" />
+            <p class="details" id="detail14">buko pandan</p>
+	<p class="prices" id="prices14">$15.00</p>
+</div>
+
+
+<div id="item15" onclick="item15();" class="food">
+    <img class="imgs" src="https://www.fnstatic.co.uk/images/source/article/omg-chocolate-cake-7_1.jpg" id="img15" />
+            <p class="details" id="detail15">chocolate cake</p>
+	<p class="prices" id="prices15">$15.00</p>
+</div>
+
+<div id="item16" onclick="item16();" class="food">
+    <img class="imgs" src="http://cookdiary.net/wp-content/uploads/images/Blueberry-Cheesecake.jpg" id="img16" />
+            <p class="details" id="detail16">blueberry cheesecake</p>
+	<p class="prices" id="prices16">$21.00</p>
+</div>
+
+<div id="item17" onclick="item17();" class="food">
+    <img class="imgs" src="https://www.thecheesecakefactory.com/assets/images/Menu-Import/CCF_SaltedCaramelCheesecake.jpg" id="img17" />
+            <p class="details" id="detail17">caramel cheesecake</p>
+	<p class="prices" id="prices17">$21.00</p>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</td>
+<td class="computations" style="width:35%">
+
+<center><p>Orders</p></center>
+
+  <div id="orders1" hidden>
+    HAM AND CHEESE
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity1" value=1 onchange="item1();" class="quantities" />
+ total: $<input type="number" id="price1"  class="quantities" disabled /> <button class="removed" id="remove1" onclick="remove1();"> REMOVE ORDER</button></div>
+
+ <div id="orders2" hidden>
+   CHEESY VEGGIES PIZZA
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity2" value=1 onchange="item2();" class="quantities" />
+ total: ₱<input type="number" id="price2"  class="quantities" disabled /> <button class="removed" id="remove2" onclick="remove2();"> REMOVE ORDER</button></div>
+
+ <div id="orders3" hidden>
+chili crab &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity3" value=1 onchange="item3();" class="quantities" />
+ total: $<input type="number" id="price3"  class="quantities" disabled /> <button class="removed" id="remove3"  onclick="remove3();"> REMOVE ORDER</button></div>
+
+ <div id="orders4" hidden>
+grilled chiken &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity4" value=1 onchange="item4();" class="quantities" />
+ total: ₱<input type="number" id="price4"  class="quantities" disabled /> <button class="removed" id="remove4" onclick="remove4();"> REMOVE ORDER</button></div>
+
+ <div id="orders5" hidden>
+tofu on stick &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity5" value=1 onchange="item5();" class="quantities" />
+ total: ₱<input type="number" id="price5"  class="quantities" disabled /> <button class="removed" id="remove5"  onclick="remove5();"> REMOVE ORDER</button></div>
+
+ <div id="orders6" hidden>
+squid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity6" value=1 onchange="item6();" class="quantities" />
+ total: ₱<input type="number" id="price6"  class="quantities" disabled /> <button class="removed" id="remove6"  onclick="remove6();"> REMOVE ORDER</button></div>
+
+ <div id="orders7" hidden>
+coke &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity7" value=1 onchange="item7();" class="quantities" />
+ total: ₱<input type="number" id="price7"  class="quantities" disabled /> <button class="removed" id="remove7"  onclick="remove7();"> REMOVE ORDER</button></div>
+
+ <div id="orders8" hidden>
+strawberry juice &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity8" value=1 onchange="item8();" class="quantities" />
+ total: ₱<input type="number" id="price8"  class="quantities" disabled /> <button class="removed" id="remove8"  onclick="remove8();"> REMOVE ORDER</button></div>
+
+
+ <div id="orders9" hidden>
+apple juice &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity9" value=1 onchange="item9();" class="quantities" />
+ total: ₱<input type="number" id="price9"  class="quantities" disabled /> <button class="removed" id="remove9"  onclick="remove9();"> REMOVE ORDER</button></div>
+
+
+ <div id="orders10" hidden>
+apple juice &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity10" value=1 onchange="item10();" class="quantities" />
+ total: ₱<input type="number" id="price10"  class="quantities" disabled /> <button class="removed" id="remove10"  onclick="remove10();"> REMOVE ORDER</button></div>
+
+
+ <div id="orders11" hidden>
+milk tea &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; quantity: <input type="number" id="quantity11" value=1 onchange="item11();" class="quantities" />
+ total: ₱<input type="number" id="price11"  class="quantities" disabled /> <button class="removed" id="remove11"  onclick="remove11();"> REMOVE ORDER</button></div>
+
+
+
+ <div id="orders12" hidden>
+strawberry cake quantity: <input type="number" id="quantity12" value=1 onchange="item12();" class="quantities" />
+ total: ₱<input type="number" id="price12"  class="quantities" disabled /> <button class="removed" id="remove12"  onclick="remove12();"> REMOVE ORDER</button></div>
+
+
+
+ <div id="orders13" hidden>
+leche flan quantity: <input type="number" id="quantity13" value=1 onchange="item13();" class="quantities" />
+ total: ₱<input type="number" id="price13"  class="quantities" disabled /> <button class="removed" id="remove13"  onclick="remove13();"> REMOVE ORDER</button></div>
+
+
+ <div id="orders14" hidden>
+buko pandan quantity: <input type="number" id="quantity14" value=1 onchange="item14();" class="quantities" />
+ total: ₱<input type="number" id="price14"  class="quantities" disabled /> <button class="removed" id="remove14"  onclick="remove14();"> REMOVE ORDER</button></div>
+
+
+<div id="orders15" hidden>
+chocolate cake quantity: <input type="number" id="quantity15" value=1 onchange="item15();" class="quantities" />
+ total: ₱<input type="number" id="price15"  class="quantities" disabled /> <button class="removed" id="remove15"  onclick="remove15();"> REMOVE ORDER</button></div>
+
+
+<div id="orders16" hidden>
+blueberry cheesecake quantity: <input type="number" id="quantity16" value=1 onchange="item16();" class="quantities" />
+ total: ₱<input type="number" id="price16"  class="quantities" disabled /> <button class="removed" id="remove16"  onclick="remove16();"> REMOVE ORDER</button></div>
+
+
+<div id="orders17" hidden>
+caramel cheesecake quantity: <input type="number" id="quantity17" value=1 onchange="item17();" class="quantities" />
+ total: ₱<input type="number" id="price17"  class="quantities" disabled /> <button class="removed" id="remove17"  onclick="remove17();"> REMOVE ORDER</button></div>
+
+
+
+<br>
+ <div id="total_amount" ><p id="totals">total amount:</p>
+             <input type="number" id="total_price" disabled />
+<p>PAYMENT OPTION </p>
+<button onclick="paycash();">cash</button>
+
+</div>
+
+
+
+
+
+<td>
+</tr>
+</table>
+
+
+
+</div>
+
+
+
+
+
+
+
+  </div>
+
+
+	
+
+
+
+<div id="official_receipt" hidden>
+<div id="printableArea">
+
+
+<div id="cash_payments">
+<br><br>
+  <p>PIZZALAB</p>
+<br>
+<p>official receipt</p>
+<br>
+<p id="or1"></p>
+
+<br>
+<p id="total_receipt">total : ₱</p>
+<p id="payment_receipt">payment : ₱</p>
+<p id="change_receipt">change : ₱</p>
+<br><br><br>
+</div>
+
+</div>
+<br>
+
+
+
+<br><br>
+<button class="print" onclick="news();"><b>New Order</b></button>
+
+</div>
+  
+</body>
+
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
